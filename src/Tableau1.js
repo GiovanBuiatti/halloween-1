@@ -310,6 +310,20 @@ class Tableau1 extends Phaser.Scene{
         });
         this.filterFilm.play('film');
 
+        this.filterFilm = this.add.sprite(0, 0, 'filterFilm1').setOrigin(0,0);
+        //animation de 3 images
+        this.anims.create({
+            key: 'film',
+            frames: [
+                {key:'filterBloody1'},
+                {key:'filterBloody2'},
+                {key:'filterBloody3'},
+            ],
+            frameRate: 16,
+            repeat: -1
+        });
+        this.filterFilm.play('film');
+
         //TODO élève faire une animation du même genre que filter mais pour bgAnimationA
 
         //gestion du parallaxe
